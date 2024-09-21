@@ -13,11 +13,10 @@ def get_book_text(path):
 
 def count_characters(text):
     h = {}
-    for i in text:
-        lowercase_string = i.lower()
-        for j in lowercase_string:
-            if j.isalpha():
-                h[j] = h.get(j, 0) + 1
+    lowercase_string = text.lower()
+    for j in lowercase_string:
+        if j.isalpha():
+            h[j] = h.get(j, 0) + 1
 
     h = dict(sorted(h.items()))
     return h
