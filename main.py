@@ -29,7 +29,9 @@ def report(char_count_dict):
 
 def get_num_words(text):
     words = text.split()
-    return len(words)
+    res = len(words)
+    total_result = ('{:,}').format(res)
+    return total_result
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
